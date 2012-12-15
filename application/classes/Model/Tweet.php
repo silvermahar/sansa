@@ -5,5 +5,10 @@
             $this->content = $tweet;
             $this->save();
         }
-}
+
+        public function get_tweets()
+        {
+            return ORM::factory('tweet')->find_all();
+        }
+    }
 ?>
